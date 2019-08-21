@@ -6,8 +6,6 @@ const superagent = require("superagent");
 const bot = new Discord.Client({disableEveryone: true});
 
 
-bot.login(botconfig.token);
-
 bot.on("ready", async () => {
     console.log('${bot.user.username} is online')
     bot.user.setActivity('Discord moderation', {type: "PLAYING"});
@@ -51,6 +49,7 @@ bot.on("message", async message => {
         return message.channel.send("Pong")
     }
 
+bot.login(botconfig.env.token);
 
 
 
