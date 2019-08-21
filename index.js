@@ -49,7 +49,7 @@ bot.on("message", async message => {
         return message.channel.send("Pong")
     }
 
-bot.login(botconfig.env.token);
+bot.login(botconfig.token);
 
 
 
